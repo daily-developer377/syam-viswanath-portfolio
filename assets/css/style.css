@@ -2152,6 +2152,7 @@ input {
 
 .header-one__logo {
   padding: 27px 60px;
+  /* padding: 20px 60px; */
   background-color: var(--primary-color);
 }
 .header-one__dots {
