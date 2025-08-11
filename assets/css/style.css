@@ -2812,7 +2812,7 @@ input {
 }
 
 .page-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/banner/page-banner.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/u-four-assets/inner-page-banner/inner-page-banner.png);
   text-transform: capitalize;
   text-align: center;
 }
