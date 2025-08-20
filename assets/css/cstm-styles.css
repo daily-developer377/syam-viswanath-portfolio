@@ -473,3 +473,484 @@
 }
 
 /* end research section */
+
+/* books */
+
+.publications-section {
+  padding: 90px 0;
+}
+
+.publications-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+.publication-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(75, 175, 71, 0.1);
+  border: 1px solid rgba(75, 175, 71, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4baf47, #5cbf58);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(75, 175, 71, 0.2);
+}
+
+.publication-card:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.year-badge {
+  display: inline-block;
+  background: #4baf47;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(75, 175, 71, 0.3);
+}
+
+.authors {
+  font-size: 1.05em;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.authors .highlight {
+  color: #4baf47;
+  font-weight: 600;
+}
+
+.chapter-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.book-details {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.publication-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.isbn {
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: #666;
+  font-family: "Courier New", monospace;
+}
+
+.doi-link {
+  background: #4baf47;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.doi-link:hover {
+  background: #3d8f3a;
+}
+
+.stats-section {
+  margin-top: 0;
+}
+
+.stats {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(75, 175, 71, 0.1);
+}
+
+.stats h2 {
+  color: #4baf47;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat-item {
+  padding: 20px;
+  background: linear-gradient(135deg, #4baf47, #5cbf58);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  display: block;
+}
+
+.stat-label {
+  font-size: 1em;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .publication-card {
+    padding: 25px;
+  }
+
+  .publication-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.publication-card:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.publication-card:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+/* end books */
+
+/* lead talks */
+
+.lead-talks-section {
+  padding: 90px 0;
+}
+
+.talks-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.talks-timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #4baf47, #5cbf58);
+  border-radius: 2px;
+}
+
+.talk-entry {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(75, 175, 71, 0.1);
+  border: 1px solid rgba(75, 175, 71, 0.1);
+  transition: all 0.3s ease;
+  margin-left: 40px;
+}
+
+.talk-entry::before {
+  content: "";
+  position: absolute;
+  /* left: -55px; */
+  left: -60px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  background: #4baf47;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #4baf47;
+}
+
+.talk-entry:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 30px rgba(75, 175, 71, 0.2);
+}
+
+.talk-entry:hover::before {
+  transform: scale(1.3);
+  background: #5cbf58;
+  box-shadow: 0 0 0 3px #5cbf58;
+}
+
+.talk-date-badge {
+  display: inline-block;
+  background: #4baf47;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(75, 175, 71, 0.3);
+}
+
+.talk-role {
+  display: inline-block;
+  background: rgba(75, 175, 71, 0.1);
+  color: #4baf47;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  border: 1px solid rgba(75, 175, 71, 0.2);
+}
+
+.talk-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.talk-title .highlight {
+  color: #4baf47;
+  background: rgba(75, 175, 71, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.talk-event {
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.talk-venue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.talk-venue::before {
+  content: "📍";
+  font-size: 1.1em;
+}
+
+.talk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.talk-type {
+  background: #f8f9fa;
+  color: #666;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.international-flag {
+  display: inline-block;
+  background: linear-gradient(45deg, #4baf47, #5cbf58);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.talks-summary-section {
+  margin-top: 60px;
+}
+
+.talks-summary {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(75, 175, 71, 0.1);
+}
+
+.talks-summary .summary-title {
+  color: #4baf47;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.summary-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.summary-stat-item {
+  padding: 20px;
+  background: linear-gradient(135deg, #4baf47, #5cbf58);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.summary-stat-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  display: block;
+}
+
+.summary-stat-label {
+  font-size: 1em;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.topics-cloud-section {
+  margin-top: 40px;
+}
+
+.topics-cloud {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(75, 175, 71, 0.1);
+}
+
+.topics-cloud .cloud-title {
+  text-align: center;
+  color: #4baf47;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+.topics-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.topic-tag {
+  background: rgba(75, 175, 71, 0.1);
+  color: #4baf47;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid rgba(75, 175, 71, 0.2);
+  transition: all 0.3s ease;
+}
+
+.topic-tag:hover {
+  background: #4baf47;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .talks-timeline {
+    padding-left: 20px;
+  }
+
+  .talk-entry {
+    margin-left: 25px;
+    padding: 25px;
+  }
+
+  .talk-entry::before {
+    /* left: -40px; */
+    left: -35px;
+  }
+
+  .talk-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.fade-in-animation {
+  animation: fadeInSlide 0.8s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.talk-entry:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.talk-entry:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+/* end lead talks */
