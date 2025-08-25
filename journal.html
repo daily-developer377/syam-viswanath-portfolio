@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foresty - Ecology and Environment Template</title>
+    <!-- Favicon img -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <!-- Bootstarp min css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- All min css -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Swiper bundle min css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Magnigic popup css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- Animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <!-- Nice select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/cstm-styles.css" />
+    <link rel="stylesheet" href="assets/css/cstm-responsive.css" />
+  </head>
+
+  <body>
+    <!-- Preloader area start -->
+    <div id="loading">
+      <div id="loading-center">
+        <div id="loading-center-absolute">
+          <div class="loading-icon text-center d-flex flex-column align-items-center justify-content-center">
+            <img class="loading-logo" src="assets/images/preloader.svg" alt="icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader area end -->
+
+    <!-- Header area start here -->
+    <header class="header header-one bor-bottom">
+      <div class="header-section">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="header-one__item d-none d-xl-block">
+            <div class="d-flex align-items-center">
+              <div class="header-one__logo">
+                <!-- <a href="./"><img src="assets/images/logo/logo-light.svg" alt="logo" /></a> -->
+                <a href="./">
+                  <h4 class="logoText">Dr. Syam Viswanath</h4>
+                </a>
+              </div>
+              <!-- <button id="openButton" class="header-one__dots">
+                            <img src="assets/images/header/header-dot.png" alt="dots">
+                        </button> -->
+            </div>
+          </div>
+          <div class="header-one__item w-100">
+            <div class="header-wrapper justify-content-center">
+              <div class="logo-menu d-block d-xl-none">
+                <a href="index.html" class="logo">
+                  <!-- <img src="assets/images/logo/logo-light.svg" alt="logo" /> -->
+                  <h4 class="logoText">Dr. Syam Viswanath</h4>
+                </a>
+              </div>
+              <div class="header-bar d-xl-none">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <ul class="main-menu">
+                <li>
+                  <a href="#">HOME</a>
+                </li>
+                <li>
+                  <a href="#">ABOUT</a>
+                </li>
+                <li>
+                  <a id="mega-menu-btn" href="research.html">RESEARCH </a>
+                </li>
+                <li>
+                  <a href="journal.html">JOURNAL</a>
+                </li>
+                <li>
+                  <a href="books.html">BOOKS</a>
+                </li>
+                <li>
+                  <a href="">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                  <a href="lead-talks.html">LEAD TALKS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header area end here -->
+
+    <!--  -->
+
+    <!--  -->
+
+    <main>
+      <!-- Page banner area start here -->
+      <section class="page-banner bg-image pt-130 pb-130">
+        <div class="container">
+          <h2 class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">Research</h2>
+          <div class="breadcrumb-list wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">
+            <a href="./">Home |</a>
+            <span class="">Research</span>
+          </div>
+        </div>
+      </section>
+      <!-- Page banner area end here -->
+      <!--  -->
+
+      <div class="content-wrapper">
+        <div class="filter-section">
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search publications by title, journal, or keywords..."
+              id="searchInput"
+            />
+            <span class="search-icon">🔍</span>
+          </div>
+          <div class="year-filters">
+            <button class="year-filter-btn active" data-year="all">All Years</button>
+            <button class="year-filter-btn" data-year="2020s">2020s</button>
+            <button class="year-filter-btn" data-year="2010s">2010s</button>
+            <button class="year-filter-btn" data-year="2000s">2000s</button>
+            <button class="year-filter-btn" data-year="1990s">1990s</button>
+          </div>
+        </div>
+
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Loading publications...</p>
+        </div>
+
+        <div class="no-results">
+          <div class="no-results-icon">📄</div>
+          <h3>No publications found</h3>
+          <p>Try adjusting your search criteria</p>
+        </div>
+
+        <div class="publications-grid" id="publicationsGrid"></div>
+      </div>
+
+      <!--  -->
+    </main>
+
+    <!--  -->
+
+    <!-- Footer area start here -->
+    <footer class="footer bg-image" data-background="assets/images/bg/footer-bg.jpg">
+      <div class="container">
+        <div class="pt-65 pb-65">
+          <div class="row g-4">
+            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">
+              <div class="footer__item">
+                <div class="footer__item-title">
+                  <h4>about foresty</h4>
+                  <span class="footer__item-title-line"></span><span class="footer__item-title-line2"></span>
+                </div>
+                <p>
+                  Tree planting is the act of planting young trees, shrubs, or other woody plants into the ground to
+                  establish new
+                </p>
+                <a
+                  href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29581.552527417!2d-77.04440883230183!3d38.80089850193032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b0f02c6539a9%3A0xacc6091466dd9068!2s901%20N%20Pitt%20St%20Suite%20170%2C%20Alexandria%2C%20VA%2022314%2C%20USA!5e0!3m2!1sen!2sbd!4v1694324425557!5m2!1sen!2sbd"
+                  class="footer__item-map-popup map-popup"
+                  >View Map <i class="fa-solid fa-location-arrow"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">
+              <div class="footer__item">
+                <div class="footer__item-title">
+                  <h4>Get in touch!</h4>
+                  <span class="footer__item-title-line"></span><span class="footer__item-title-line2"></span>
+                </div>
+                <ul>
+                  <li class="pb-3">
+                    <a href="#0"
+                      ><i class="fa-solid fa-location-dot pe-1 primary-color"></i> 901 N Pitt Str., Suite 170
+                      Alexandria, <br />
+                      USA
+                    </a>
+                  </li>
+                  <li class="pb-3">
+                    <a href="tel:+4065550120"
+                      ><i class="fa-solid fa-phone-volume pe-1 primary-color"></i>
+                      (406) 555-0120
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#0"><i class="fa-solid fa-envelope pe-1 primary-color"></i> info@extrem.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".6s">
+              <div class="footer__item">
+                <div class="footer__item-title">
+                  <h4>Quick Link</h4>
+                  <span class="footer__item-title-line"></span><span class="footer__item-title-line2"></span>
+                </div>
+                <ul>
+                  <li class="pb-1">
+                    <a href="service-single.html"><i class="fa-solid fa-chevron-right pe-1 primary-color"></i> Home </a>
+                  </li>
+                  <li class="pb-1">
+                    <a href="service-single.html"
+                      ><i class="fa-solid fa-chevron-right pe-1 primary-color"></i> About
+                    </a>
+                  </li>
+                  <li class="pb-1">
+                    <a href="service-single.html"
+                      ><i class="fa-solid fa-chevron-right pe-1 primary-color"></i> RESEARCH
+                    </a>
+                  </li>
+                  <li class="pb-1">
+                    <a href="service-single.html"
+                      ><i class="fa-solid fa-chevron-right pe-1 primary-color"></i> Urban planning
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-single.html"
+                      ><i class="fa-solid fa-chevron-right pe-1 primary-color"></i> Save Green House
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; Copyright 2023 <a href="#0">foresty</a> All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- Footer area end here -->
+
+    <!-- Back to top area start here -->
+    <div class="scroll-up">
+      <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- Back to top area end here -->
+
+    <!-- Jquery 3. 7. 1 Min Js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap min Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Swiper bundle min Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Counterup min Js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Wow min Js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Magnific popup min Js -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- Nice select min Js -->
+    <script src="assets/js/nice-select.min.js"></script>
+    <!-- Isotope pkgd min Js -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Waypoints Js -->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!-- Script Js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- journal datas -->
+
+    <script>
+      const publications = [
+        {
+          year: 2025,
+          authors: "Divya Soman, Anitha V, Syam Viswanath and M. Sreeraj",
+          title:
+            "From cognition to economic valuation of cultural ecosystem services- An evidence from Parambikulam tiger reserve, Kerala.",
+          journal: "Journal for Nature Conservation",
+          volume: "84, 126828",
+        },
+        {
+          year: 2024,
+          authors: "Anjana, N., Pranav, K., Sreekumar, V. B., Raghu A V, Syam Viswanath",
+          title:
+            "Ethnographic exploration and documentation of Kannadippaya (Bamboo reed mat) weaving among tribal communities in Kerala.",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "23(3), 69-80",
+        },
+        {
+          year: 2024,
+          authors: "Krishnapriya K. R, . Sreekumar V. B and. Syam Viswanath",
+          title:
+            "Physical and anatomical variations in culm characteristics of Pseudoxytenanthera bourdillonii (Gamble) H.B.Naithani --a lesser studied endemic bamboo in the Western Ghats, Kerala",
+          journal: "Journal of Bamboo Rattan",
+          volume: "23(2), 37-54",
+        },
+        {
+          year: 2023,
+          authors:
+            "Suma Arun Dev, Remya Unnikrishnan, P. S. Prathibha, K. Sijimol, V. B. Sreekumar , A. AzharAli , E. V. Anoop, Syam Viswanath",
+          title: "Artificial intelligence in timber forensics employing DNA barcode database.",
+          journal: "3 Biotech",
+          volume: "183, 1-13",
+        },
+        {
+          year: 2023,
+          authors: "Shukla S.R and Viswanath S.",
+          title:
+            "Comparison of growth and few wood quality parameters of 24--25-yearold Tectona grandis (teak) trees raised under three agroforestry practices",
+          journal: "Agroforestry Systems",
+          volume: "97, 631-645",
+        },
+        {
+          year: 2022,
+          authors: "Muhsina Moosa, Antony C. P., Amruth M., Sreekumar V. B. and Syam Viswanath",
+          title:
+            "A review of the current state of knowledge on Pseudoxytenanthera ritchiei- a lesser-known bamboo species with high utilization potential from Peninsular India.",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "21 (4), 146-165",
+        },
+        {
+          year: 2022,
+          authors: "Lubina PA, Sandeep S, Anil kumar KV and Viswanath S",
+          title:
+            "Litter dynamics and nutrient flux in endemic bamboo species Dendrocalamus stocksii plantations moist semi-arid zones of peninsular India.",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "21(4), 166-177",
+        },
+        {
+          year: 2022,
+          authors: "Susanth C. S, Viswanath S and Vijai Singh Katiyar",
+          title: "Possibilities of standardizing solid bamboo furniture making in India.",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "21 (4), 178-186",
+        },
+        {
+          year: 2021,
+          authors: "Raghu, A.V.and Viswanath,S.",
+          title: '"Kannadipaaya"- role of geographical indication in brand making and conservation',
+          journal: "Current Science",
+          volume: "121(1): 19-20",
+        },
+        {
+          year: 2021,
+          authors: "Shukla S.R. and Syam Viswanath",
+          title:
+            "Comparative financial analysis of plantation teak (Tectona grandis L.f.) under different management practices in farmlands.",
+          journal: "Indian Journal of Agroforestry",
+          volume: "23(2), 107-117",
+        },
+        {
+          year: 2021,
+          authors: "Syam Viswanath and Sandeep Chakraborty",
+          title: "Indian sandalwood Cultivation Prospects in India. Indian Sandalwood Springer.",
+          journal: "Springer",
+          volume: "ISBN 978-981-16-6564-6",
+        },
+        {
+          year: 2020,
+          authors: "Sandeep Chakraborty, L. Manjunatha, V.S. Shetteppanavar, A.S. Devakumar, S. Viswanath, A. Sinha",
+          title:
+            "Screening of selected hosts for Sandalwood seedlings at nursery based on host cation exchange capacity.",
+          journal: "Indian Forester",
+          volume: "146 (12), 1170-1175",
+        },
+        {
+          year: 2020,
+          authors:
+            "Chandrashekar Sandeep, Amit Kumar, Vereena Rodigues, Syam Viswanath, Ashutosh K Shukla, Veluswamy Sundaresan",
+          title: "Morpho-genetic divergence and population structure in Indian Santalum album L.",
+          journal: "Trees-Structure and Function",
+          volume: "34 (5), 1113-1129",
+        },
+        {
+          year: 2020,
+          authors: "Unnimaya Raveendran, Ganga KA, Viswanath S, Sreekumar VB and R Jayaraj",
+          title: "Nutritional evaluation of different bamboo species as a sustainable food source.",
+          journal: "Journal of Non Timber Forest products",
+          volume: "27 (1), 22-26",
+        },
+        {
+          year: 2020,
+          authors: "Raghu A V, Amruth M and Syam Viswanath",
+          title: "Covid 19: Should Forestry extension pay attention to new emerging threats?",
+          journal: "Current Science",
+          volume: "119(8),1244-1245",
+        },
+        {
+          year: 2020,
+          authors: "Chatterjee N, Nair P.K.R., Nair, V.D, Syam Viswanath and Abhishek Bhattacharjee",
+          title:
+            "Depth-wise distribution of soil-carbon stock in aggregate-sized fractions under shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India.",
+          journal: "Agroforestry Systems",
+          volume: "94, 341-358",
+        },
+        {
+          year: 2019,
+          authors: "Lubina P.A, Aparna Rajan, Pavithra G.M, Ravi N, Anilkumar K.S, Viswanath S.",
+          title:
+            "Assessment of soil organic carbon stocks in Dendrocalamus stocksii and Dendrocalamus strictus plantations in three different agroclimatic zones",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "18 (3): 55-62",
+        },
+        {
+          year: 2019,
+          authors: "Rane A.D., Viswanath S, Sheshshayee M.S., Sawardekar S.V",
+          title: "Population structure of Dendrocalamus stocksii along its geographical distribution",
+          journal: "J. Bamboo and Rattan",
+          volume: "18 (3),44-54",
+        },
+        {
+          year: 2019,
+          authors: "Sushant Arade, Syam Viswanath and Shakti Chauhan",
+          title: "Evaluation of growth and quality parameters of germplasm of Dendrocalamus stocksii",
+          journal: "J. Bamboo and Rattan",
+          volume: "18 (4), 73-82",
+        },
+        {
+          year: 2019,
+          authors: "Chandrashekara U.M., Pavan Tikhile, Sruthi Subbanna, Syam Viswanath",
+          title: "Socio-cultural and management significance of bamboos in Indian heritage and tradition",
+          journal: "J. Bamboo and Rattan",
+          volume: "18 (4): 64-73",
+        },
+        {
+          year: 2019,
+          authors: "Sruthi subbanna and Syam Viswanath",
+          title: "Identifying potential areas for Bambusa balcooa Roxb. using Ecological Niche Modelling tools.",
+          journal: "J. Bamboo and Rattan",
+          volume: "18 (1): 1-9",
+        },
+        {
+          year: 2018,
+          authors: "Viswanath, P.A. Lubina, S. Subbanna, M.C. Sandhya",
+          title: "Traditional agroforestry systems and Practices: A review",
+          journal: "Advanced Agricultural Research and Technology Journal",
+          volume: "2(1),18-29",
+        },
+        {
+          year: 2018,
+          authors: "SruthSubbanna, Sandhya, M.C, Pavithra G.M and Viswanath Syam",
+          title:
+            "Influence of agroclimatic parameters on growth and above ground biomass production of Bambusa balcooa Roxb. and Dendrocalamus stocksii Munro: Two commercially important bamboo species in India.",
+          journal: "eJournal of Applied Forest Ecology",
+          volume: "6(2), 11-23",
+        },
+        {
+          year: 2018,
+          authors: "Babita Mishra, Sandeep Chakraborty, Sushant Arade, Sruthi Subbanna,Viswanath Syam",
+          title:
+            "Assessment of heartwood and oil content of Santalum album Linn. in natural and naturalized populations across contrasting edapho-climatic conditions in India.",
+          journal: "Indian Forester",
+          volume: "144 (7), 675-685",
+        },
+        {
+          year: 2018,
+          authors: "Mishra B, Chakraborty S, Sandhya MC. and S Viswanath",
+          title: "Sandalwood farming in India: problems and prospects.",
+          journal: "Indian Journal of Tropical Biodiversity",
+          volume: "26(1), 1-12",
+        },
+        {
+          year: 2016,
+          authors: "B. Dhanya, Seema Purushothaman and Syam Viswanath",
+          title:
+            "Economic rationale of traditional agroforestry systems: a case-study of Ficus trees in semiarid agro-ecosystems of Karnataka, southern India.",
+          journal: "Forests, Trees and Livelihoods",
+          volume: "25(4), 267-281",
+        },
+        {
+          year: 2016,
+          authors: "Rane A.D, Sowmya C and S.Viswanath",
+          title:
+            "Can Dendrocalamus stocksii (Munro.) be the ideal Multipurpose Bamboo species for Domestication in Peninsular India?",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "15 (1-4), 23-32",
+        },
+        {
+          year: 2016,
+          authors: "Ramachandran Nair PK, Syam Viswanath and PA Lubina",
+          title: "Cinderella agroforestry systems.",
+          journal: "Agroforestry Systems",
+          volume: "91(5), 901-917",
+        },
+        {
+          year: 2016,
+          authors: "Sandeep C, Raju Gogoi, Riajur Rahman, RK Boruah and Syam Viswanath",
+          title:
+            "Variation in heartwood and oil content of Santalum album. Linn (East Indian Sandalwood) in Assam and Karnataka.",
+          journal: "Journal of Bioresources",
+          volume: "3(1), 79-87",
+        },
+        {
+          year: 2015,
+          authors: "Jagdish MR, Prabhugoudi Biradar, Nethravathi B, Parvathy K.S, AnilKumar K.S and Syam Viswanath",
+          title:
+            "Nutrient dynamics through litter fall and decomposition in Bamboo agroforestry systems in humid tropics of Karnataka, India.",
+          journal: "The Ecoscan",
+          volume: "7, 497-501",
+        },
+        {
+          year: 2015,
+          authors: "Sowmya Chandramouli and S. Viswanath",
+          title:
+            "Nutritional composition of edible bamboo shoots of some commercially important bamboo species in Peninsular India",
+          journal: "Int. Journal of Basic and Life Sciences",
+          volume: "3(6), 275- 287",
+        },
+        {
+          year: 2014,
+          authors: "Rane A.D., Shirke A.D., Sowmya C. and S. Viswanath",
+          title:
+            "Variation in culm biomass production in Dendrocalamus stocksii (Munro.) along elevation gradient in Central Western Ghats, India",
+          journal: "eJournal of Applied Forest Ecology (eJAFE)",
+          volume: "2(2), 54-58",
+        },
+        {
+          year: 2014,
+          authors: "Chandramouli S, Viswanath S and U Nidoni",
+          title:
+            "Potential for exploitation of Dendrocalamus stocksii (Munro.) shoots: New report from Peninsular India.",
+          journal: "Tropical Plant Research",
+          volume: "1(3), 82-84",
+        },
+        {
+          year: 2014,
+          authors: "Shukla SR and Syam Viswanath",
+          title:
+            "Comparative study on growth, wood quality and financial returns of teak (Tectona grandis L.f.) managed under three different agroforestry practices.",
+          journal: "Agroforestry Systems",
+          volume: "88(2), 331-341",
+        },
+        {
+          year: 2014,
+          authors: "Dhanya B, Sathish BN, Syam Viswanath and Seema Purushothaman",
+          title:
+            "Ecosystem services of native trees: experiences from two traditional agroforestry systems in Karnataka, Southern India.",
+          journal: "International Journal of Biodiversity Science, Ecosystem Services & Management",
+          volume: "10(2), 101-111",
+        },
+        {
+          year: 2014,
+          authors: "Nagalakshmi M, Sahana Vishwanath and S Viswanath",
+          title:
+            "Adventitious shoot regeneration from hypocotyls of Wrightia arborea (Dennst.) Mabb.: an endangered toy wood species.",
+          journal: "Journal of Cell and Tissue research",
+          volume: "14(2), 4339-4334",
+        },
+        {
+          year: 2014,
+          authors: "Rane AD, C Sowmya and S Viswanath",
+          title:
+            "Culm Emergence and Soil Properties in Dendroclamus stocksii under different land use systems in Central Western Ghats.",
+          journal: "Journal of Tree Sciences",
+          volume: "33(2), 48-52",
+        },
+        {
+          year: 2014,
+          authors:
+            "Animesh Sinha, Rameshwar Das, Bibhuti Deka, Syam Viswanath, BS Chandrashekar and Sandeep Chakraborty",
+          title: "Authentication, Micropropagation and Conservation of Embelia ribes - A Vulnerable Medicinal Plant.",
+          journal: "Indian Forester",
+          volume: "140 (7), 707-714",
+        },
+        {
+          year: 2013,
+          authors: "Dhanya B, Syam Viswanath, and Seema Purushothaman",
+          title:
+            "Decomposition and Nutrient Release Dynamics of Ficus benghalensis L. Litter in Traditional Agroforestry Systems of Karnataka, Southern India",
+          journal: "ISRN Forestry",
+          volume: "1-7 (DOI:10.1155/2013/524679)",
+        },
+        {
+          year: 2013,
+          authors: "Dhanya B, Syam Viswanath and Seema Purushothaman",
+          title:
+            "Crop Yield Reduction in Ficus Agroforestry Systems of Karnataka, Southern India: Perceptions and Realities.",
+          journal: "Agroecology and Sustainable Food Systems",
+          volume: "37 :727-735",
+        },
+        {
+          year: 2013,
+          authors: "Sathish, B.N, Syam Viswanath, Kushalappa, CG, Jagadish MR. and Ganeshaiah, KN",
+          title:
+            "Comparative assessment of floristic structure, diversity and regeneration status of tropical rain forests of Western Ghats of Karnataka, India.",
+          journal: "Journal of Applied and Natural Sciences",
+          volume: "5(1), 157-164",
+        },
+        {
+          year: 2013,
+          authors: "Dhanya B, Syam Viswanath and Seema Purushothaman",
+          title:
+            "Does litterfall from native trees support rainfed agriculture? Analysis of Ficus trees in agroforestry systems of southern dry agroclimatic zone of Karnataka, southern India",
+          journal: "Journal of Forestry Research",
+          volume: "24(2), 333-338",
+        },
+        {
+          year: 2012,
+          authors: "Dhanya B, Purushothaman S and S Viswanath",
+          title:
+            "Ficus trees in rainfed agricultural systems of Karnataka, southern India: An analysis of structure, benefits and farmers' perceptions.",
+          journal: "Journal of Tropical Agriculture",
+          volume: "50 (1&2), 59-62",
+        },
+        {
+          year: 2011,
+          authors: "Raju Chavan, Viswanath S and H Shivanna",
+          title: "Correlation and path coefficient analysis in five Casuarina species for productivity of biomass.",
+          journal: "Karnataka J. Agric. Sci.",
+          volume: "24(5), 678-680",
+        },
+        {
+          year: 2010,
+          authors: "Rashmi R. Shanbhag, Jagadish MR, Dhanya B and S Viswanath",
+          title:
+            "Assessment of termite infestation in six industrially important bamboo species in semiarid tracts of Karnataka, India.",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "11, 109-113",
+        },
+        {
+          year: 2010,
+          authors: "S.Viswanath, B. Dhanya, S. Purushothaman and T.S. Rathore",
+          title: "Financial viability of Sandal (Santalum album) based agroforestry practices in Southern India.",
+          journal: "Indian Journal of Agroforestry",
+          volume: "12(2), 14-22",
+        },
+        {
+          year: 2010,
+          authors: "Niranjana, KS and S Viswanath",
+          title:
+            "Nutrient Dynamics in Tea (Camellia sinensis) based Shaded Perennial Agroforestry Systems in Western Ghats, Kerala.",
+          journal: "Indian Journal of Agroforestry",
+          volume: "10 (1), 1-7",
+        },
+        {
+          year: 2010,
+          authors: "T. K. Kunhamu, B. M. Kumar, S. Viswanath and P. Sureshkumar",
+          title:
+            "Root activity of young Acacia mangium Willd trees: influence of stand density and pruning as studied by 32P soil injection technique.",
+          journal: "Agroforestry Systems",
+          volume: "78, 27-38",
+        },
+        {
+          year: 2010,
+          authors: "Dhanya,B, Syam Viswanath and Seema Purushothaman",
+          title: "Sandal (Santalum album L.) conservation in southern India: A review of policies and their impacts.",
+          journal: "Journal of Tropical Agriculture",
+          volume: "48 (1-2), 1-10",
+        },
+        {
+          year: 2010,
+          authors: "Viswanath S, Dhanya,B., Seema Purushothaman and TS Rathore",
+          title: "Financial viability of Sandal (Sandalum album L.) agroforestry practices in southern India.",
+          journal: "Indian Journal of Agroforestry",
+          volume: "12 (2), 14-22",
+        },
+        {
+          year: 2009,
+          authors: "Kunhamu TK, Kumar BM and S.Viswanath",
+          title:
+            "Does thinning affect litterfall, litter decomposition and associated nutrient release in Acacia mangium stands of Kerala in Peninsular India?",
+          journal: "Canadian Journal of Forest Research",
+          volume: "39, 792-801",
+        },
+        {
+          year: 2009,
+          authors: "Pankaj K. Aggarwal and S Viswanath",
+          title: "Growth stress differences in block and line plantations of Acacia hybrid",
+          journal: "Journal of Indian Academy of Wood Science",
+          volume: "6, 64-70",
+        },
+        {
+          year: 2009,
+          authors: "Satish BN, Kushalppa CG and Syam Viswanath",
+          title: "Assessment of tree diversity in coffee based Agroforestry systems of Kodagu, Central Western Ghats.",
+          journal: "Indian Journal of Tropical Biodiversity",
+          volume: "17, 101-104",
+        },
+        {
+          year: 2008,
+          authors: "Niranjana KS and S Viswanath",
+          title:
+            "Root characteristics of tea [Camellia sinensis(L.) O. Kuntze] and silver oak [Grevillea robusta(A. Cunn)] in a mixed tea plantation at Munnar, Kerala.",
+          journal: "Journal of Tropical Agriculture",
+          volume: "46, 13-19",
+        },
+        {
+          year: 2007,
+          authors: "Viswanath S, Dhanya B and TS Rathore",
+          title: "Domestication of Dendrocalamus brandisii (Burma bamboo) in upland paddy fields in Coorg, Karnataka.",
+          journal: "Journal of Bamboo and Rattan",
+          volume: "6 (3&4), 215-222",
+        },
+        {
+          year: 2006,
+          authors: "Viswanath S, Singh RP and RC Thapliyal",
+          title: "Seed bank dynamics of Buxus wallichiana baillon in a Himalayan moist temperate forest.",
+          journal: "Tropical Ecology",
+          volume: "47(1), 145-148",
+        },
+        {
+          year: 2004,
+          authors: "S. Viswanath, R.S. Peddappaiah, V. Subramoniam, P. Manivachakam and M. George",
+          title: "Management of Casuarina equisetifolia in Wide-row Intercropping Systems for Enhancing Productivity",
+          journal: "Indian Journal of Agroforestry",
+          volume: "6(2), 19-25",
+        },
+        {
+          year: 2003,
+          authors: "Sathyakumar, S and S.Viswanath",
+          title:
+            "Observations on food habits of Asiatic black bear in Kedarnath Wild life Sanctuary, India: Preliminary evidence on their role in seed germination and dispersal.",
+          journal: "URSUS",
+          volume: "14(1), 99-103",
+        },
+        {
+          year: 2002,
+          authors: "Viswanath S, Singh RP and RC Thapliyal",
+          title: "Seed germination patterns in a Himalayan moist temperate forest.",
+          journal: "Tropical Ecology",
+          volume: "43(2) , 265-273",
+        },
+        {
+          year: 2000,
+          authors: "S Viswanath, P. K. R. Nair, P.K. Kaushik and U. Prakasam",
+          title: "Acacia nilotica trees in rice fields: A traditional agroforestry system in central India.",
+          journal: "Agroforestry Systems",
+          volume: "50, 157--177",
+        },
+        {
+          year: 2000,
+          authors: "Purushothaman, S, Viswanath S and C Kunhikannan",
+          title:
+            "Economic valuation of extractive conservation in a tropical deciduous forest in Madhya Pradesh, India.",
+          journal: "Tropical Ecology",
+          volume: "41(1), 61-72",
+        },
+        {
+          year: 1997,
+          authors: "Viswanath S, Kaushik PK, Pandey DK Negi KS and NC Pant",
+          title: "Effect of pruning treatments on Sesbania sesban (L.) Pers. alley cropped with maize and cowpea.",
+          journal: "Range Management & Agroforestry",
+          volume: "18, 71-78",
+        },
+        {
+          year: 1996,
+          authors: "Purushottaman, S, Mukundan, K and S Viswanath",
+          title: "The impact of cement klin dust on rural economy-A case study.",
+          journal: "Indian Journal of Agricultural Economics",
+          volume: "51(3), 407 -- 411",
+        },
+        {
+          year: 1994,
+          authors: "Viswanath S.",
+          title:
+            "Acacia nilotica (Linn.) Willd ex. Del.: An evaluation of the tree for Agroforestry systems in semi-arid regions of India.",
+          journal: "Range Management & Agroforestry",
+          volume: "15, 105-112",
+        },
+      ];
+    </script>
+
+    <!-- end journal datas -->
+  </body>
+</html>
