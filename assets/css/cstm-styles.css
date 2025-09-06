@@ -408,6 +408,7 @@
   font-style: italic;
   color: #4baf47;
   font-weight: 600;
+  /* text-transform: math-auto; */
 }
 
 .achievement-badge {
