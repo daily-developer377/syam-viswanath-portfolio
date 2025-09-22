@@ -209,7 +209,6 @@
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translate(0, 0) rotate(0deg);
@@ -1849,11 +1848,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.02;
-  background-image: repeating-linear-gradient(45deg,
-      #4baf47 0px,
-      #4baf47 1px,
-      transparent 1px,
-      transparent 15px);
+  background-image: repeating-linear-gradient(45deg, #4baf47 0px, #4baf47 1px, transparent 1px, transparent 15px);
 }
 .consultancy-grid {
   display: grid;
@@ -1892,16 +1887,16 @@
 }
 
 .card-icon::before {
-  content: '🌿';
+  content: "🌿";
   font-size: 24px;
 }
 
 .consultancy-card:nth-child(2) .card-icon::before {
-  content: '🎋';
+  content: "🎋";
 }
 
 .consultancy-card:nth-child(3) .card-icon::before {
-  content: '🌳';
+  content: "🌳";
 }
 
 .card-title {
@@ -1952,7 +1947,6 @@
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -1989,3 +1983,259 @@
 }
 
 /* end Consultancies */
+
+/* current assignments */
+
+.assignments-section {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9f5 0%, rgba(75, 175, 71, 0.03) 100%);
+  overflow: hidden;
+}
+
+.assignments-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.assignments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.assignment-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(75, 175, 71, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(75, 175, 71, 0.1);
+  overflow: hidden;
+}
+
+.assignment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4baf47, #5fbf52);
+}
+
+.assignment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(75, 175, 71, 0.12), 0 8px 16px rgba(0, 0, 0, 0.04);
+  border-color: #4baf47;
+}
+
+.card-number {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background: rgba(75, 175, 71, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #4baf47;
+}
+
+.assignment-role {
+  font-size: 0.9rem;
+  color: #4baf47;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.assignment-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e2d;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.assignment-journal {
+  font-size: 1rem;
+  color: #6b7c6e;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.assignment-details {
+  font-size: 0.95rem;
+  color: #5a6b5d;
+  line-height: 1.6;
+}
+
+/* Animated Background Elements */
+.bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(75, 175, 71, 0.05);
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: -3%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+.floating-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #4baf47;
+  border-radius: 50%;
+  animation: dot-float 8s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.dot-1 {
+  top: 25%;
+  right: 20%;
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  top: 70%;
+  left: 15%;
+  animation-delay: 3s;
+}
+
+.dot-3 {
+  bottom: 30%;
+  right: 10%;
+  animation-delay: 6s;
+}
+
+.wave-line {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4baf47, transparent);
+  opacity: 0.1;
+  animation: wave-move 10s linear infinite;
+}
+
+.wave-1 {
+  top: 30%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  bottom: 40%;
+  right: -100px;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes dot-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateY(-15px);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translateY(15px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assignments-section {
+    padding: 60px 20px;
+  }
+
+  .assignments-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .assignment-card {
+    padding: 30px 25px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .assignment-card {
+    padding: 25px 20px;
+  }
+
+  .card-number {
+    top: 15px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+/* end current assignments */
